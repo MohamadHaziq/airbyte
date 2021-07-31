@@ -24,7 +24,9 @@
 
 package io.airbyte.config.persistence;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import io.airbyte.commons.lang.MoreBooleans;
+import io.airbyte.config.AirbyteConfig;
 import io.airbyte.config.ConfigSchema;
 import io.airbyte.config.DestinationConnection;
 import io.airbyte.config.SourceConnection;
@@ -37,7 +39,9 @@ import io.airbyte.validation.json.JsonValidationException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
+import java.util.stream.Stream;
 
 public class ConfigRepository {
 
@@ -201,6 +205,14 @@ public class ConfigRepository {
 
   public List<StandardSyncOperation> listStandardSyncOperations() throws IOException, JsonValidationException {
     return persistence.listConfigs(ConfigSchema.STANDARD_SYNC_OPERATION, StandardSyncOperation.class);
+  }
+
+  public <T> void replaceAllConfigs(Map<AirbyteConfig, Stream<T>> configs, boolean dryRun) throws IOException {
+    persistence.replaceAllConfigs(configs, dryRun);
+  }
+
+  public Map<String, Stream<JsonNode>> dumpConfigs() throws IOException {
+    return persistence.dumpConfigs();
   }
 
 }

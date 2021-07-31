@@ -2,7 +2,7 @@
 
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/airbytehq/airbyte/Airbyte%20CI)](https://github.com/airbytehq/airbyte/actions/workflows/gradle.yml) [![License](https://img.shields.io/github/license/airbytehq/airbyte)](./LICENSE)
 
-![](docs/.gitbook/assets/airbyte_horizontal_color_white-background.svg)
+![](docs/.gitbook/assets/airbyte_new_logo.svg)
 
 **Data integration made simple, secure and extensible.**  
 The new open-source standard to sync data from applications, APIs & databases to warehouses, lakes & other destinations.
@@ -20,7 +20,7 @@ Airbyte is on a mission to make data integration pipelines a commodity.
 * **No more security compliance process** to go through as Airbyte is self-hosted. 
 * **No more pricing indexed on volume**, as cloud-based solutions offer. 
 
-Here's a list of our [connectors with their health status](docs/integrations/connector-health.md).
+Here's a list of our [connectors with their health status](docs/integrations).
 
 ## Quick start
 
@@ -33,6 +33,8 @@ docker-compose up
 Now visit [http://localhost:8000](http://localhost:8000)
 
 Here is a [step-by-step guide](https://github.com/airbytehq/airbyte/tree/e378d40236b6a34e1c1cb481c8952735ec687d88/docs/quickstart/getting-started.md) showing you how to load data from an API into a file, all on your computer.
+
+If you want to schedule a 20-min call with our team to help you get set up, please select [some time directly here](https://calendly.com/nataliekwong/airbyte-onboarding).
 
 ## Features
 
